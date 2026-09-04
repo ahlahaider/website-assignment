@@ -1,0 +1,76 @@
+/* <style> */
+        /* Base Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, sans-serif; background: #f4f4f6; color: #333; line-height: 1.6; }
+
+        /* Typography & Spacing helpers */
+        header, nav, main, aside, footer, article { padding: 20px; border-radius: 8px; margin-bottom: 15px; }
+
+        /* 1. Header & Navigation */
+        header { background: rgb(71, 4, 69); color: white; text-align: center; }
+        nav { background: #b978ae; display: flex; gap: 20px; justify-content: center; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; font-weight: lighter; }
+
+        /* 2. THE FLEXBOX LAYOUT CONTAINER */
+        /* We use a generic 'div' here because it serves purely for CSS layout alignment */
+        .layout-wrapper {
+            display: flex;
+            flex-direction: row;        
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 15px auto;
+            padding: 0 10px;
+        }
+
+        /* 3. Main Content Area (Takes 3x space) */
+        main { background: white; flex: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        article { background: rgb(237, 255, 41); border: 1px solid #e2e8f0; }
+
+        /* 4. Sidebar Area (Takes 1x space) */
+        aside { background: rgb(174, 207, 233); flex: 1; height: fit-content; }
+
+        /* 5. Footer */
+        footer { background: #b978ae; color: white; text-align: center; margin-bottom: 0; }
+
+        /* 6. Responsive Breakdown for Mobile Devices */
+        @media (max-width: 768px) {
+            .layout-wrapper {
+                flex-direction: column; /* Stacks sidebar under content on mobile */
+            }
+        }
+   
+/* Project cards */
+.project-card {
+    border-left: 5px solid rgb(71, 4, 69);
+    border-radius: 8px;
+    padding: 18px 20px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card h3 {
+    color: rgb(71, 4, 69);
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #444;
+    margin-bottom: 12px;
+}
+
+
+.card{ background: rgba(185, 120, 174, 0.18); }  
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgb(71, 4, 69);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
